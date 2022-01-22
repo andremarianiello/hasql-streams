@@ -1,0 +1,7 @@
+packages: 
+  hasql-streams-core
+  hasql-conduit
+  hasql-pipes
+  hasql-streamly
+  hasql-streaming
+  hasql-streams-example

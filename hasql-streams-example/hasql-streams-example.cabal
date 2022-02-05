@@ -2,7 +2,7 @@ cabal-version: 2.4
 name:          hasql-streams-example
 version:       0.1.0.0
 synopsis:
-  An example program that shows how to Hasql streams with Rel8
+  An example program that shows how to use Hasql streams with Rel8
 
 homepage:      https://github.com/andremarianiello/hasql-streams
 bug-reports:   https://github.com/andremarianiello/hasql-streams/issues
@@ -20,10 +20,10 @@ executable hasql-streaming
     , bytestring
     , conduit
     , hasql
-    , hasql-conduit
-    , hasql-pipes
-    , hasql-streaming
-    , hasql-streamly
+    , hasql-streams-conduit
+    , hasql-streams-pipes
+    , hasql-streams-streaming
+    , hasql-streams-streamly
     , hasql-th
     , hasql-transaction
     , hasql-transaction-io

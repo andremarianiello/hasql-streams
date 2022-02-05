@@ -1,7 +1,7 @@
 cabal-version: 2.4
 name:          hasql-streams-core
 version:       0.1.0.0
-synopsis:      Use Hasql queries with streams
+synopsis:      Stream Hasql queries
 homepage:      https://github.com/andremarianiello/hasql-streams
 bug-reports:   https://github.com/andremarianiello/hasql-streams/issues
 license:       MIT

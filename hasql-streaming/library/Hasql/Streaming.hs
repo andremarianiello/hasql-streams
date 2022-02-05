@@ -19,7 +19,7 @@ import Hasql.Streams
 streamingQuery :: 
   Statement params [a] -> params ->
   Stream (Of a) (CursorTransactionIO s) ()
-streamingQuery stmt params = streamQuery stmt params foldStreamingStream
+streamingQuery stmt params = cursorStreamQuery stmt params foldStreamingStream
 
 foldStreamingStream ::
   CursorStreamFold s a (Stream (Of a) (CursorTransactionIO s) ())

@@ -21,7 +21,7 @@ import Hasql.Streams
 -- | Run a `Statement`, but return a `Conduit` instead of a list
 conduitQuery :: Statement params [a] -> params ->
   ConduitT () a (CursorTransactionIO s) ()
-conduitQuery stmt params = streamQuery stmt params foldConduitStream
+conduitQuery stmt params = cursorStreamQuery stmt params foldConduitStream
 
 foldConduitStream :: CursorStreamFold s a (ConduitT () a (CursorTransactionIO s) ())
 foldConduitStream step init = lift init >>= unfoldM step

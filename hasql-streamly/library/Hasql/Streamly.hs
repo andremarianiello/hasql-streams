@@ -22,7 +22,7 @@ import Hasql.Streams
 streamlyQuery ::
   (Streamly.IsStream t) => 
   Statement params [a] -> params -> t (CursorTransactionIO s) a
-streamlyQuery stmt params = streamQuery stmt params foldStreamlyStream
+streamlyQuery stmt params = cursorStreamQuery stmt params foldStreamlyStream
 
 foldStreamlyStream ::
   (Streamly.IsStream t) =>

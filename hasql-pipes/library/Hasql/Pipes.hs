@@ -20,7 +20,7 @@ import Hasql.Streams
 
 -- | Run a `Statement`, but return a `Producer` instead of a list
 pipesQuery :: Statement params [a] -> params -> Producer a (CursorTransactionIO s) ()
-pipesQuery stmt params = streamQuery stmt params foldPipesStream
+pipesQuery stmt params = cursorStreamQuery stmt params foldPipesStream
 
 foldPipesStream :: CursorStreamFold s a (Producer a (CursorTransactionIO s) ())
 foldPipesStream step init = lift init >>= Pipes.unfoldr (fmap maybeToEither . step)

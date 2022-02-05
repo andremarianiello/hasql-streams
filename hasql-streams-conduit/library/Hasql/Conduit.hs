@@ -18,7 +18,7 @@ import Hasql.CursorTransactionIO
 -- hasql-streams-core
 import Hasql.Streams
 
--- | Run a `Statement`, but return a `Conduit` instead of a list
+-- | Run a `Statement` using a cursor to return a `Conduit` instead of a list
 conduitQuery :: Statement params [a] -> params ->
   ConduitT () a (CursorTransactionIO s) ()
 conduitQuery stmt params = cursorStreamQuery stmt params foldConduitStream

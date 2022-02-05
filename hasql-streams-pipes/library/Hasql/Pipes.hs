@@ -18,7 +18,7 @@ import Hasql.CursorTransactionIO
 -- hasql-streams-core
 import Hasql.Streams
 
--- | Run a `Statement`, but return a `Producer` instead of a list
+-- | Run a `Statement` using a cursor to return a `Producer` instead of a list
 pipesQuery :: Statement params [a] -> params -> Producer a (CursorTransactionIO s) ()
 pipesQuery stmt params = cursorStreamQuery stmt params foldPipesStream
 

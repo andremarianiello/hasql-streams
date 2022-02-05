@@ -15,7 +15,7 @@ import Hasql.CursorTransactionIO
 -- hasql-streaming
 import Hasql.Streams
 
--- | Run a `Statement`, but return a `Stream` instead of a list
+-- | Run a `Statement` using a cursor to return a `Stream` instead of a list
 streamingQuery :: 
   Statement params [a] -> params ->
   Stream (Of a) (CursorTransactionIO s) ()

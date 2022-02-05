@@ -18,7 +18,7 @@ import Hasql.CursorTransactionIO
 -- hasql-streams-core
 import Hasql.Streams
 
--- | Run a `Statement`, but return a instance of `Streamly.IsStream` instead of a list
+-- | Run a `Statement` using a cursor to return an instance of `Streamly.IsStream` instead of a list
 streamlyQuery ::
   (Streamly.IsStream t) => 
   Statement params [a] -> params -> t (CursorTransactionIO s) a
